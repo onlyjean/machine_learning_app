@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-machinelearningapp-dev-154057-authRole",
+      "UnauthRoleArn": "arn:aws:iam::954432212477:role/amplify-machinelearningapp-dev-154057-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::954432212477:role/amplify-machinelearningapp-dev-154057-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
+      "UnauthRoleName": "amplify-machinelearningapp-dev-154057-unauthRole",
+      "StackName": "amplify-machinelearningapp-dev-154057",
+      "StackId": "arn:aws:cloudformation:eu-west-2:954432212477:stack/amplify-machinelearningapp-dev-154057/49a13450-1cd4-11ee-8622-0ae24c717924",
+      "AmplifyAppId": "dsxr40yvbyhag"
+    }
+  }
+}
