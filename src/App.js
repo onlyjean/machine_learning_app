@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav } from './components'
+import { Brand, Nav } from './components'
 import { Footer } from './containers'
 
 
@@ -9,10 +9,12 @@ const App = () => {
       <div className='gradient_bg'>
         < Nav />
       </div>
-      <Footer />
+      < Brand />
+      < Footer />
     </div>
   )
 }
 
 export default App
 
+ 
