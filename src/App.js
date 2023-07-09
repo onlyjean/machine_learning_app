@@ -1,13 +1,15 @@
-import React from 'react'
-import { Brand, Nav } from './components'
-import { Footer } from './containers'
+import React from 'react';
+import './App.css';
+import { Brand, Nav, Header } from './components';
+import { Footer } from './containers';
 
 
 const App = () => {
   return (
     <div className='App'>
-      <div className='gradient_bg'>
+      <div className='gradient__background'>
         < Nav />
+        < Header />
       </div>
       < Brand />
       < Footer />
