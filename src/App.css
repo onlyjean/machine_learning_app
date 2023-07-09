@@ -73,9 +73,9 @@ a{
     background: radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
 }
 
-.gradeint__text{
+.gradient__text{
 
-  background: var(--gradient__text);
+  background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -116,7 +116,7 @@ a{
 }
 
 /* Smaller screens */
-@media screem and (max-width: 700px){
+@media screen and (max-width: 700px){
   .section__margin{
     margin: 4rem;
   }
@@ -126,7 +126,7 @@ a{
 }
 
 /* Mobile devices */
-@media screem and (max-width: 550px){
+@media screen and (max-width: 550px){
   .section__margin{
     margin: 4rem 2rem;
   }
