@@ -8,7 +8,7 @@ const Menu = () => (
   <>
   <p><a href='#home'>Home</a></p>
   <p><a href='#futurStox'>About Us</a></p>
-  <p><a href='#ml'>Machine Learning</a></p>
+  <p><a href='#machine'>Machine Learning</a></p>
   <p><a href='#features'>Capabilities</a></p>
   <p><a href='#stock'>Stock Market</a></p>
   </>

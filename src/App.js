@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Brand, Nav } from './components';
-import { Footer, Header } from './containers';
+import { BrandLogo, Features, Nav} from './components';
+import { Footer, Header, ML } from './containers';
 
 
 const App = () => {
@@ -11,7 +11,9 @@ const App = () => {
         < Nav />
         < Header />
       </div>
-      < Brand />
+      < BrandLogo />
+      < ML />
+      <Features />
       < Footer />
     </div>
   )

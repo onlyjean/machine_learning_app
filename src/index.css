@@ -12,7 +12,9 @@
   --color-text: #81AFDD;
   --color-subtext: #FF8A71;
 
-  --gradient-brandcustom: linear-gradient(103.22deg, #6400A1 10.86%, #002853 200.55%);
+  --gradient-brandcustom: radial-gradient(circle at 50% 800%, #6400A1 40%, #002853 150%);
+
+  
    
 
 }
