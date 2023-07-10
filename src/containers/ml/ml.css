@@ -18,11 +18,13 @@ background: #000;
  background: -ms-radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
 
  /* global 92%+ browsers support */
- background: radial-gradient(circle at 30% -100%, #d77272 85%, #6400A1 100%);
+ background: radial-gradient(circle at 30% -100%, #000000 85%, #6400A1 100%);
 }
 
 .ml__whatML-feature {
     display: flex;
+    margin: 0 8rem;
+    text-align: justify;
 
 }
 
@@ -39,25 +41,26 @@ background: #000;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 4rem 0 2rem;
+    margin: 4rem 8rem 2rem;
 }
 
 .ml__whatML-heading h1 {
     font-family: var(--font-family);
-    font-size: 34px;
+    font-size: 40px;
     font-weight: 1000;
     line-height: 45px;
-    max-width: 810px;
+    max-width: 1000px;
 
 }
 
 .ml__whatML-heading p {
     font-family: var(--font-family);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 30px;
 
     color: var(--color-subtext);
+    cursor: pointer;
 
 }
 
@@ -65,9 +68,24 @@ background: #000;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin: 2rem 8rem;
 
     margin-top: 2rem;
 }
+
+.ml__whatML-container .ml__features-container__feature {
+    flex: 1;
+    flex-direction: column;
+    min-width: 210%;
+    display: unset;
+    margin: 1rem;
+ }
+
+ .ml__whatML-container .ml__features-container__feature {
+    
+    margin-top: 0.5rem;
+ }
+ 
 
 
   @media screen and (max-width: 850px){
@@ -87,7 +105,7 @@ background: #000;
    
     .ml__whatML-heading h1 {
         line-height: 40px;
-        font-size: 24;
+        font-size: 24px;
        }
 
 
@@ -106,7 +124,7 @@ background: #000;
    
   }
 
-  .ml__whatML-feature .ml__features-container__feature {
+  .ml__whatML-container .ml__features-container__feature {
     min-width: 100%;
     margin: 1rem 0;
  }

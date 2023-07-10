@@ -74,7 +74,6 @@ a{
 }
 
 .gradient__text{
-
   background: var(--gradient-text);
   background-clip: text;
   -webkit-background-clip: text;
