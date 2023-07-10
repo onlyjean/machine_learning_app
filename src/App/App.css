@@ -47,7 +47,8 @@
 }
 
 body{
-  background: var(--color-bg);
+  background: black;
+
 }
 
 a{
@@ -67,10 +68,14 @@ a{
     background: -o-radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
 
     /* ie 10+ */
-    background: -ms-radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
+    background: -ms-radial-gradient(ccircle at 5% 25%, #002853 0%, #000 100%);
 
     /* global 92%+ browsers support */
-    background: radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
+    background: radial-gradient(circle at 5% 25%, #002853 0%, #000 100%);
+}
+
+.machine-color{
+  background: black;
 }
 
 .gradient__text{
@@ -92,6 +97,7 @@ a{
 	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
 
  @-webkit-keyframes scale-up-center {
   0% {

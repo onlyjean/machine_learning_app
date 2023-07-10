@@ -3,7 +3,6 @@ display: flex;
 flex-direction: column;
 
 padding: 2rem;
-background: #000;
 
  /* ff 3.6+ */
  background: -moz-radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
@@ -15,10 +14,10 @@ background: #000;
  background: -o-radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
 
  /* ie 10+ */
- background: -ms-radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
+ background: -ms-radial-gradient(circle at 50% -100%, #000 80%, #6400A1 100%);
 
  /* global 92%+ browsers support */
- background: radial-gradient(circle at 30% -100%, #000000 85%, #6400A1 100%);
+ background: radial-gradient(circle at 50% -100%, #000 80%, #6400A1 100%);
 }
 
 .ml__whatML-feature {

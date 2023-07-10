@@ -54,7 +54,7 @@
 .ml__nav-menu_container button {
     padding: 0.5rem 1rem;
     color: #fff;
-    background: #000;
+    background: var(--gradient-brandcustom);
     font-family: var(--font-family);
     left: 1153px;
     top: 55px;
@@ -109,7 +109,7 @@
     display: none;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1350px) {
     .ml__nav-links_container {
         display: none;
     }

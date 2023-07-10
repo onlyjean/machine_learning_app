@@ -12,7 +12,10 @@ const App = () => {
         < Header />
       </div>
       < BrandLogo />
+      <div className='machine-color'>
       < ML />
+
+      </div>
      
       < Footer />
     </div>
