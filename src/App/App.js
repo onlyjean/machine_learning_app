@@ -1,7 +1,7 @@
 import React from 'react';
+import { BrandLogo, Features, Nav } from '../components';
+import { Footer, Header, ML } from '../containers';
 import './App.css';
-import { BrandLogo, Features, Nav} from './components';
-import { Footer, Header, ML } from './containers';
 
 
 const App = () => {

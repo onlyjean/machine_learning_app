@@ -5,7 +5,7 @@ import './ml.css'
 
 const ML = () => {
   return (
-    <div className='ml__whatML section__margin' id='machine'>
+    <div className='ml__whatML section__margin' id='about'>
       <div className='ml__whatML-feature'>
         <Features />
       </div>
