@@ -23,17 +23,18 @@ background: #000;
 
 .ml__whatML-feature {
     display: flex;
-    margin: 0 8rem;
-    text-align: justify;
-
+    margin: 1rem 7rem;
+    max-width: 100%;
+    align-items: flex-start;
 }
 
+
 .ml__whatML-feature .ml__features-container__feature {
-    margin: 0;
+    margin: 1rem;
 }
 
 .ml__whatML-feature .ml__features-container__feature-text {
-    max-width: 700px;
+    max-width: 1500px;
 }
 
 .ml__whatML-heading {
@@ -41,7 +42,10 @@ background: #000;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 4rem 8rem 2rem;
+    margin: 6rem 8rem 6rem;
+    margin-right: 14rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
 }
 
 .ml__whatML-heading h1 {
@@ -68,7 +72,8 @@ background: #000;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 2rem 8rem;
+    /* margin: 2rem 8rem; */
+    
 
     margin-top: 2rem;
 }
@@ -76,28 +81,93 @@ background: #000;
 .ml__whatML-container .ml__features-container__feature {
     flex: 1;
     flex-direction: column;
-    min-width: 210%;
+    max-width: 210%;
     display: unset;
-    margin: 1rem;
+    margin: 2rem 8rem;
  }
+
+
 
  .ml__whatML-container .ml__features-container__feature {
     
     margin-top: 0.5rem;
  }
  
+ @media screen and (max-width: 1440px){
+
+    .ml__whatML-feature .ml__features-container__feature-text {
+        margin-top: 0.5rem;
+    }
+    
+    .ml__whatML-container .ml__features-container__feature {
+        max-width: 100%;
+        margin: 1rem 0;
+        
+     } 
+    
+     .ml__whatML-container {
+        flex-direction: row;
+     }
+    
+    
+    
+     .ml__whatML-feature  {
+        max-width: 100%;
+        margin: 1rem 0;
+    
+     }
+    
+    
+     .ml__whatML-heading {
+        max-width: 100%;
+        margin: 1rem 0;
+    
+     }
+
+ }
 
 
-  @media screen and (max-width: 850px){
-   .ml__whatML-heading {
+ @media screen and (max-width: 850px){
+   /* .ml__whatML-heading {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 0rem;
-   }
+   } */
 
-   .ml__whatML-heading p {
+   /* .ml__whatML-heading p {
     margin-top: 1rem;
-   }
+   } */
+
+   .ml__whatML-feature .ml__features-container__feature-text {
+    margin-top: 0.5rem;
+}
+
+.ml__whatML-container .ml__features-container__feature {
+    max-width: 100%;
+    margin: 1rem 0;
+    
+ } 
+
+ .ml__whatML-container {
+    flex-direction: column;
+ }
+
+
+
+ .ml__whatML-feature  {
+    max-width: 100%;
+    margin: 1rem 0;
+
+ }
+
+
+ .ml__whatML-heading {
+    max-width: 100%;
+    margin: 1rem 0;
+    flex-direction: column;
+
+
+ }
 
   }
 
@@ -106,28 +176,70 @@ background: #000;
     .ml__whatML-heading h1 {
         line-height: 40px;
         font-size: 24px;
+        
        }
 
-
-
-    .ml__whatML-feature .ml__features-container__feature {
+    /* .ml__whatML-feature .ml__features-container__feature {
        flex-direction: column;
-    }
+       
+    } */
     
     .ml__whatML-feature .ml__features-container__feature-text {
         margin-top: 0.5rem;
     }
+
+    .ml__whatML-container .ml__features-container__feature {
+        max-width: 100%;
+        margin: 1rem 0;
+        
+     } 
+
+     .ml__whatML-container {
+        flex-direction: column;
+     }
+
+
+    
+     .ml__whatML-feature  {
+        max-width: 100%;
+        margin: 1rem 0;
+    
+     }
+    
+    
+     .ml__whatML-heading {
+        max-width: 100%;
+        margin: 1rem 0;
+    
+    
+     }
    
   }
 
   @media screen and (max-width: 350px){
    
-  }
 
   .ml__whatML-container .ml__features-container__feature {
-    min-width: 100%;
+    max-width: 100%;
     margin: 1rem 0;
+    
+ } 
+
+ .ml__whatML-feature  {
+    max-width: 100%;
+    margin: 1rem 0;
+
  }
+
+
+ .ml__whatML-heading {
+    max-width: 100%;
+    margin: 1rem 0;
+
+
+ }
+
+}
  
 
 

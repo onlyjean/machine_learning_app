@@ -11,14 +11,13 @@ const ML = () => {
       </div>
       <div className='ml__whatML-heading'>
         <h1 className='gradient__text'>Predicting Profits, Powering Portfolios: Your Future in Finance with Machine Learning</h1>
-        <p>Trade with more confidence</p>
+        {/* <p>Trade with more confidence</p> */}
       </div>
       <div className='ml__whatML-container'>
-      <Features title='Learn' text='Delve into the fascinating world of finance and machine learning with FuturStox. Whether you are a savvy investor or a curious beginner, our platform is designed to educate. Gain an in-depth understanding of financial markets and how machine learning models are used to predict stock prices. Equip yourself with knowledge that goes beyond the surface, fostering a comprehensive understanding that aids in smart decision-making.' />
+      <Features title='Learn' text='Embark on a journey with FuturStox to deepen your understanding of financial markets and machine learning, empowering you with comprehensive knowledge for informed decision-making.' />
       <Features title='Tune' text='FuturStox is not just about providing predictions—it is about personalising your experience. Our platform offers users the unique opportunity to tune the machine learning models to their preferences.' />
-      <Features title='Predict' text='Utilising a powerful combination of offline and online learning models, our platform delivers timely predictions of stock prices. With this information at your fingertips, you can make informed decisions that are based on sophisticated AI insights, rather than mere speculation. FuturStox is more than a tool—it is your partner in navigating the dynamic world of investments.' />
+      <Features title='Predict' text='FuturStox near real-time prediction, powered by sophisticated AI insights, provides you with accurate stock price forecasts, making it your reliable partner in navigating the dynamic world of investments.' />
       </div>
-      
     </div>
   )
 }

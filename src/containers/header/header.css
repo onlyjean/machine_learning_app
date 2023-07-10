@@ -45,7 +45,7 @@
     font-family: var(--font-family);
     font-size: 30px;
     line-height: 27px;
-    border: 1px solid;
+    
 
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -72,7 +72,7 @@
     outline: none;
     padding: 0 1rem;
 
-    border: 1px solid;
+   
 }
 
 .ml__header-content__people {

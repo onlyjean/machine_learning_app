@@ -13,7 +13,7 @@ const App = () => {
       </div>
       < BrandLogo />
       < ML />
-      <Features />
+     
       < Footer />
     </div>
   )
