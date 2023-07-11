@@ -1,7 +1,7 @@
 import React from 'react'
-import './features.css'
+import './feature.css'
 
-const Features = ({title, text}) => {
+const Feature = ({title, text}) => {
   return (
     <div className='ml__features-container__feature'>
       <div className='ml__features-container__feature-title'>
@@ -15,4 +15,4 @@ const Features = ({title, text}) => {
   )
 }
 
-export default Features
+export default Feature

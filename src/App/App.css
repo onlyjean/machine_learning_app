@@ -74,8 +74,12 @@ a{
     background: radial-gradient(circle at 5% 25%, #002853 0%, #000 100%);
 }
 
-.machine-color{
+.machine-background{
   background: black;
+}
+
+.algo-background{
+  background: purple;
 }
 
 .gradient__text{

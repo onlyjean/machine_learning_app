@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrandLogo, Features, Nav } from '../components';
+import { BrandLogo, Nav, Algo } from '../components';
 import { Footer, Header, ML } from '../containers';
 import './App.css';
 
@@ -12,8 +12,11 @@ const App = () => {
         < Header />
       </div>
       < BrandLogo />
-      <div className='machine-color'>
+      <div className='machine-background'>
       < ML />
+      </div>
+      <div className='algo-background'>
+        < Algo />
 
       </div>
      
