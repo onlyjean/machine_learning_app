@@ -39,6 +39,7 @@
 } */
 
 
+
 *{
   padding: 0;
   scroll-behavior: smooth;
@@ -79,7 +80,19 @@ a{
 }
 
 .algo-background{
-  background: purple;
+  background-image: url(../assets/black.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+
+}
+
+.brand-logo-background{
+  background-image: url(../assets/purple.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+
 }
 
 .gradient__text{
@@ -88,6 +101,14 @@ a{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.gradient__text-algo{
+    background: var(--gradient-text-algo);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 
 .section__padding{
   padding: 4rem 6rem;

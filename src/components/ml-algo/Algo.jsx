@@ -1,6 +1,6 @@
 import React from 'react'
-import './algo.css'
 import Feature from '../feature/Feature'
+import './algo.css'
 
 const featuresData = [
   {
@@ -30,7 +30,7 @@ return (
   <div className='ml__algorithms section__padding' id='algo'>
       <div className='ml__algorithms-heading'>
           <h1 className='gradient__text'>Explore the Engine: Unveiling the Advanced Machine Learning Algorithms Behind The Predictions</h1>
-          <p>Sign up for more information.</p>
+          <p>Sign up for more information</p>
       </div>
       <div className='ml__algorithms-container'>
           {featuresData.map((item, index) => (
