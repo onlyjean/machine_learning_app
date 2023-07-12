@@ -1,0 +1,20 @@
+.signIn-background{
+    background-image: url("https://images.unsplash.com/photo-1517245386807-9b4d0ddda4e7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXR5JTIwY2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.amplify-card {
+    background-color: var(--amplify-colors-neutral-100);
+  }

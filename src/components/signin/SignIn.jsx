@@ -3,6 +3,7 @@ import './signin.css'
 import { Authenticator } from '@aws-amplify/ui-react'
 import '@aws-amplify/ui-react/styles.css';
 import { useNavigate } from 'react-router-dom';
+import { Card, Heading, Text, ThemeProvider } from '@aws-amplify/ui-react';
 
 
 
@@ -13,8 +14,8 @@ const navigate = useNavigate();
 
 
   return (
-   
-   <Authenticator usernameAlias="email" signUpConfig={{ hideAllDefaults: true }}>
+    <div className='signIn-background section__padding'>
+   <Authenticator usernameAlias="emai" signUpConfig={{ hideAllDefaults: true }}>
 
 {({ signOut, user }) => (
 
@@ -25,6 +26,7 @@ const navigate = useNavigate();
     
     )}
     </Authenticator>
+    </div>
   )
 }
 

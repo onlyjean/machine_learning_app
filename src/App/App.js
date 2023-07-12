@@ -9,12 +9,9 @@ import './App.css';
 
 
 
-const App = () => {
+const HomePage = () => {
   return (
-
-//     <Authenticator>
-
-// {({ signOut, user }) => (
+    
     
     <div className='App'>
       
@@ -36,21 +33,27 @@ const App = () => {
       </div>
 
       <Pricing />
-     ß
+  
       < Footer />
-      {/* <button onClick={signOut}>Sign out</button> */}
+      </div>
+      )
+    }
+
+      const App = () => {
+  return (
+
     
-        <Routes>
+    <div className='signIn-background'>
+
+     <Routes>
+         <Route path="/" element={<HomePage/>} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignIn />} /> 
-        </Routes>
-     
-    </div>
+        </Routes>  
+
+      </div> 
 
 
-
-// )}
-//     </Authenticator>
   )
 }
 
