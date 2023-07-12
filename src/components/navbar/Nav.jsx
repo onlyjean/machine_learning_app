@@ -32,6 +32,7 @@ const Nav = () => {
         <p> Sign In</p>
         <button type='button'>Sign Up </button>
       </div>
+      
       <div className='ml__nav-menu'>
       {toggleMenu
         ? <RiCloseLine color='#fff' size={27} onClick= {() => setToggleMenu(false)}/>
