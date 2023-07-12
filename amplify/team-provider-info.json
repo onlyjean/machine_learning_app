@@ -10,6 +10,11 @@
       "StackName": "amplify-machinelearningapp-dev-154057",
       "StackId": "arn:aws:cloudformation:eu-west-2:954432212477:stack/amplify-machinelearningapp-dev-154057/49a13450-1cd4-11ee-8622-0ae24c717924",
       "AmplifyAppId": "dsxr40yvbyhag"
+    },
+    "categories": {
+      "auth": {
+        "machinelearningapp": {}
+      }
     }
   }
 }
