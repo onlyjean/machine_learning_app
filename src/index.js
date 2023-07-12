@@ -14,9 +14,22 @@ import { AmplifyProvider } from '@aws-amplify/ui-react';
 
 Amplify.configure(config);
 
+const theme = {
+    name: 'custom',
+    tokens: {
+        colors: {
+            background: {
+                primary: { value:'black' }
+                
+            }
+        }
+    }
+
+}
+
 
 ReactDOM.render(
-<AmplifyProvider >
+<AmplifyProvider theme={theme}>
     <BrowserRouter>
         <App />
     </BrowserRouter> 
