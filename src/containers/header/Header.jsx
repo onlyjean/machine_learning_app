@@ -2,8 +2,18 @@ import React from 'react';
 import laptop from '../../assets/laptop.png';
 import people from '../../assets/people.png';
 import './header.css';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  //useNavigate
+  const navigate = useNavigate();
+
+  const navigateToSignUp = () => {
+    navigate('/signup');
+  };
+
+
+
   return (
     <div className='ml__header section__padding' id='home'>
       <div className='ml__header-content'>
@@ -12,7 +22,7 @@ const Header = () => {
         <p>Welcome to FuturStox - the future of trading and investing. Learn and leverage the power of AI and Machine Larning in the finance world. </p>
         <div className='ml__header-content__input'>
           <input type='email' placeholder='your email address' />
-          <button type='button'> Get Started </button>
+          <button type='button'  onClick={navigateToSignUp}>Get Started</button>
           </div>
           <div className='ml__header-content__people'>
             <img src={people} alt='people'/>
