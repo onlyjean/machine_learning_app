@@ -1,33 +1,43 @@
-import React from 'react'
-import './signin.css'
-import { Authenticator } from '@aws-amplify/ui-react'
+import { Authenticator, Card, Heading, Text, ThemeProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Card, Heading, Text, ThemeProvider } from '@aws-amplify/ui-react';
+import './signin.css';
 
 
-
+// ... other imports ...
 
 const SignIn = () => {
-    
-const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
 
+  // Navigate to the home page when the user state changes
+  useEffect(() => {
+    if (user) {
+      navigate("/");
+    }
+  }, [user, navigate]);
 
   return (
     <div className='signIn-background section__padding'>
-   <Authenticator usernameAlias="emai" signUpConfig={{ hideAllDefaults: true }}>
+      <Authenticator usernameAlias="email" signUpConfig={{ hideAllDefaults: true }}>
+        {({ signOut, user: authUser }) => {
+          // Update the user state when the user prop changes
+          if (authUser && user !== authUser) {
+            setUser(authUser);
+          }
 
-{({ signOut, user }) => (
-
-    <div>
-      <button onClick={signOut}>Sign out</button>
-      {user && navigate("/")}
+          return (
+            <div>
+              <button onClick={signOut}>Sign out</button>
+            </div>
+          );
+        }}
+      </Authenticator>
     </div>
-    
-    )}
-    </Authenticator>
-    </div>
-  )
+  );
 }
 
-export default SignIn
+export default SignIn;
+
+
