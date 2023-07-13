@@ -17,4 +17,35 @@ body {
 
 .amplify-card {
     background-color: var(--amplify-colors-neutral-100);
+
+
   }
+
+
+  .button-container {
+
+
+        position: fixed; 
+        top: 20px; 
+        left: 0px; 
+        right: 0; 
+        text-align: center; 
+    
+      
+  }
+
+   .signin-button {
+    
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: var(--gradient-brandcustom);
+    font-family: var(--font-family);
+    font-weight: 500;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 25px;
+    cursor: pointer;
+  }
+   
+
+   

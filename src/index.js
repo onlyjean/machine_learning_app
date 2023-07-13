@@ -17,16 +17,27 @@ Amplify.configure(config);
 const theme = {
     name: 'custom',
     tokens: {
-        colors: {
-            background: {
-                primary: { value:'black' }
-                
-            }
-        }
-    }
-
-}
-
+      colors: {
+        background: {
+          primary: { value: '#000'},
+        },
+        font: {
+          primary: { value: 'white' },
+        },
+        border: {
+          primary: { value: 'white' },
+        },
+      },
+      font: {
+        family: { value: '"Manrope", sans-serif' },
+      },
+      border: {
+        width: { value: '1px' },
+        style: { value: 'solid' },
+      },
+    },
+  };
+  
 
 ReactDOM.render(
 <AmplifyProvider theme={theme}>
