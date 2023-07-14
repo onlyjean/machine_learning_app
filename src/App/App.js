@@ -19,7 +19,7 @@ const HomePage = () => {
       
       <div className='gradient__background'>
         < Nav />
-        < SignedInNav />
+        {/* < SignedInNav /> */}
         < Header />
       </div>
 
@@ -94,10 +94,15 @@ const SignedInUser = () => {
     <div>
 
      <Routes>
-     <Route path="/" element={isAuthenticated ? <SignedInUser/> : <HomePage/>} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignIn />} /> 
-        </Routes>  
+          {/* <Route path="/home" element={<HomePage/>} /> */}
+          <Route path='/' element={<HomePage/>} />
+          {/* <Route path="/authenticaed" element={isAuthenticated ? <SignedInUser/> : <SignedInNav/>} /> */}
+          <Route path='/signin' element={<SignIn />} />
+          <Route path='/signup' element={<SignIn />} /> 
+          <Route path='/signedIn' element={<SignedInUser />} /> 
+
+
+      </Routes>  
 
        </div> 
 

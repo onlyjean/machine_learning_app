@@ -14,7 +14,7 @@ const SignIn = () => {
   // Navigate to the home page when the user state changes
   useEffect(() => {
     if (user) {
-      navigate("/");
+      navigate('/signedin');
     }
   }, [user, navigate]);
 
