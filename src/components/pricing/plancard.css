@@ -5,7 +5,7 @@
     padding: 2rem;
     min-height: 528px;
     width: 100%;
-    min-width: 520px;
+    box-sizing: border-box;
     border-radius: 1.5rem;
     color: black;
     font-weight: 900;
@@ -77,17 +77,20 @@
     .plan-card h2 {
       font-size: 1.25rem;
     }
+    .plan-card h2 {
+      font-size: 2.875rem;
+    }
   
     .plan-price {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
     }
   
     .plan-price div {
-      font-size: 1rem;
+      font-size: 2.75rem;
     }
   
     .plan-button {
-      font-size: 0.875rem;
+      font-size: 1rem;
     }
   }
   
@@ -99,19 +102,19 @@
     }
   
     .plan-card h2 {
-      font-size: 1rem;
+      font-size: 2.875rem;
     }
   
     .plan-price {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   
     .plan-price div {
-      font-size: 0.875rem;
+      font-size: 2.75rem;
     }
   
     .plan-button {
-      font-size: 0.75rem;
+      font-size: 1rem;
     }
   }
   
@@ -123,7 +126,7 @@
     }
   
     .plan-card h2 {
-      font-size: 0.875rem;
+      font-size: 2.875rem;
     }
   
     .plan-price {
@@ -131,11 +134,11 @@
     }
   
     .plan-price div {
-      font-size: 0.75rem;
+      font-size: 2.75rem;
     }
   
     .plan-button {
-      font-size: 0.625rem;
+      font-size: 1rem;
     }
 
 }
