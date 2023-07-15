@@ -1,13 +1,85 @@
-.ml__pricing {
+.pricing-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.ml__pricing-heading h1{
-    text-align: center;
-    font-size: 50px;
-    font-weight: 800;
+    background-color: black;
+    padding: 1rem;
     font-family: var(--font-family);
+   
+  }
+  
+  .pricing-header {
+    margin-bottom: 0.5rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  .pricing-header h1 {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    padding: 1rem 0;
+    font-size: 80px;
+  }
+  
+  .pricing-header p {
+    font-size: 1.25rem;
+    color: white;
+    font-size: 30px;
+  }
+  
+  .pricing-plans {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+  
+  @media (min-width: 1200px) {
+    .pricing-plans {
+      flex-direction: row;
+    }
+
+
+    @media (min-width: 1200px) {
+        .pricing-plans {
+          flex-direction: row;
+        }
+      }
+      
+      /* Medium devices (tablets, less than 992px) */
+      @media (max-width: 991.98px) {
+        .pricing-header h1 {
+          font-size: 60px;
+        }
+      
+        .pricing-header p {
+          font-size: 24px;
+        }
+      }
+      
+      /* Small devices (landscape phones, less than 768px) */
+      @media (max-width: 767.98px) {
+        .pricing-header h1 {
+          font-size: 48px;
+        }
+      
+        .pricing-header p {
+          font-size: 18px;
+        }
+      }
+      
+      /* Extra small devices (portrait phones, less than 576px) */
+      @media (max-width: 575.98px) {
+        .pricing-header h1 {
+          font-size: 36px;
+        }
+      
+        .pricing-header p {
+          font-size: 16px;
+        }
+  }
 
 }
+  

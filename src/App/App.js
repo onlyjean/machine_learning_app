@@ -1,11 +1,11 @@
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
+import { Auth } from 'aws-amplify';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { Algo, BrandLogo, Nav, Pricing, SignIn, SignedInNav } from '../components';
 import { Footer, Header, ML } from '../containers';
 import './App.css';
-import { Auth } from 'aws-amplify';
 
 
 
