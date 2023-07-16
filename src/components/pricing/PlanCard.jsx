@@ -2,6 +2,7 @@ import React from 'react';
 import './plancard.css'
 
 export default function PlanCard({
+  isAuthenticated,
   name,
   description,
   price,
@@ -9,6 +10,18 @@ export default function PlanCard({
   color,
   buttonText = 'Start Trial',
 }) {
+
+  const handleButtonClick = () => {
+    if (isAuthenticated) {
+      // If the user is authenticated, redirect to Stripe
+      window.location.href = 'https://stripe.com'; // Replace this with your Stripe URL
+    } else {
+      // If the user is not authenticated, show a message
+      alert('Please register first');
+    }
+  };
+
+  
   return (
     <div className="plan-card" style={{ backgroundColor: color }}>
       <h2>{name}</h2>
@@ -41,7 +54,7 @@ export default function PlanCard({
           </li>
         ))}
       </ul>
-      <button className="plan-button">
+      <button className="plan-button" onClick={handleButtonClick}>
         {buttonText}
       </button>
     </div>

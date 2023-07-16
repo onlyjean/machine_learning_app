@@ -12,6 +12,21 @@ import './App.css';
 
 
 const HomePage = () => {
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    checkAuthState();
+  }, []);
+
+  const checkAuthState = async () => {
+    try {
+      await Auth.currentAuthenticatedUser();
+      setIsAuthenticated(true);
+    } catch (e) {
+      setIsAuthenticated(false);
+    }
+  };
   return (
     
     
@@ -35,7 +50,7 @@ const HomePage = () => {
         < Algo />
       </div>
 
-      <Pricing />
+      <Pricing isAuthenticated={isAuthenticated} />
   
       < Footer />
       </div>
@@ -44,6 +59,21 @@ const HomePage = () => {
 
 
 const SignedInUser = () => {
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    checkAuthState();
+  }, []);
+
+  const checkAuthState = async () => {
+    try {
+      await Auth.currentAuthenticatedUser();
+      setIsAuthenticated(true);
+    } catch (e) {
+      setIsAuthenticated(false);
+    }
+  };
   return (
     
     
@@ -66,7 +96,7 @@ const SignedInUser = () => {
         < Algo />
       </div>
 
-      <Pricing />
+      <Pricing isAuthenticated={isAuthenticated} />
   
       < Footer />
       </div>
@@ -75,20 +105,20 @@ const SignedInUser = () => {
 
       const App = () => {
 
-        const [isAuthenticated, setIsAuthenticated] = useState(false);
+  //       const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  useEffect(() => {
-    checkAuthState();
-  }, []);
+  // useEffect(() => {
+  //   checkAuthState();
+  // }, []);
 
-  const checkAuthState = async () => {
-    try {
-      await Auth.currentAuthenticatedUser();
-      setIsAuthenticated(true);
-    } catch (e) {
-      setIsAuthenticated(false);
-    }
-  };
+  // const checkAuthState = async () => {
+  //   try {
+  //     await Auth.currentAuthenticatedUser();
+  //     setIsAuthenticated(true);
+  //   } catch (e) {
+  //     setIsAuthenticated(false);
+  //   }
+  // };
   return (
     
     <div>

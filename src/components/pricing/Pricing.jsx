@@ -1,8 +1,8 @@
-import React from 'react'
-import './pricing.css'
-import PlanCard from './PlanCard'
+import React from 'react';
+import PlanCard from './PlanCard';
+import './pricing.css';
 
-const Pricing = () => {
+const Pricing = ({isAuthenticated}) => {
   return (
     <div className="pricing-container section__padding">
       <div className="pricing-header gradient__text">
@@ -14,6 +14,7 @@ const Pricing = () => {
       
       <div className="pricing-plans">
         <PlanCard
+          isAuthenticated={isAuthenticated}
           color="#C264FF"
           name="Premium"
           description="Get more advanced"
