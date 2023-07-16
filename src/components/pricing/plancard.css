@@ -72,6 +72,39 @@
     background-color: rgba(0, 0, 255, 0.5);
   }
 
+  .alert {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    font-family: var(--font-family);
+    font-size: 25px;
+    color: #031B34;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    width: 300px; /* Adjust as needed */
+    height: 120px; /* Adjust as needed */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .alert-close {
+    padding: 0.5rem 2rem;
+  color: #fff;
+  background: var(--gradient-brandcustom);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  cursor: pointer;
+  }
+  
+
   /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
     .plan-card h2 {

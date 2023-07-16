@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './plancard.css'
 
 export default function PlanCard({
@@ -11,19 +11,24 @@ export default function PlanCard({
   buttonText = 'Start Trial',
 }) {
 
+  const [showAlert, setShowAlert] = useState(false);
+
   const handleButtonClick = () => {
     if (isAuthenticated) {
       // If the user is authenticated, redirect to Stripe
       window.location.href = 'https://stripe.com'; // Replace this with your Stripe URL
     } else {
       // If the user is not authenticated, show a message
-      alert('Please register first');
+      setShowAlert(true);
+      setTimeout(() => setShowAlert(false), 10000); // auto-hide after 10 seconds
     }
   };
 
   
   return (
     <div className="plan-card" style={{ backgroundColor: color }}>
+      {showAlert && <div className='alert'>Please register first<button className='alert-close' onClick={() => setShowAlert(false)}>Close</button>
+      </div>}
       <h2>{name}</h2>
       <div className="plan-price">
         {price ? (
