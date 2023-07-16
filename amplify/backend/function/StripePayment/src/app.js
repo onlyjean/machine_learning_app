@@ -13,6 +13,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 // stripe import
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 
 // declare a new express app
@@ -27,6 +28,25 @@ app.use(function(req, res, next) {
   next()
 });
 
+
+app.post('/create-checkout-session', async (req, res) => {
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: [{
+      price_data: {
+        currency: 'gbp',
+        product_data: {
+          name: 'Premium Plan',
+        },
+        unit_amount: 0,  // $10.00
+      },
+      quantity: 1,
+    }],
+    mode: 'subscription',
+    success_url: 'http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}',
+    cancel_url: 'http://localhost:3000/cancel',
+  })
+});
 
 
 

@@ -1,5 +1,7 @@
+import { loadStripe } from '@stripe/stripe-js';
+import { API } from 'aws-amplify';
 import React, { useState } from 'react';
-import './plancard.css'
+import './plancard.css';
 
 export default function PlanCard({
   isAuthenticated,
@@ -9,14 +11,26 @@ export default function PlanCard({
   features = [], // default value for features
   color,
   buttonText = 'Start Trial',
+  
 }) {
 
   const [showAlert, setShowAlert] = useState(false);
 
   const handleButtonClick = () => {
     if (isAuthenticated) {
-      // If the user is authenticated, redirect to Stripe
-      window.location.href = 'https://stripe.com'; // Replace this with your Stripe URL
+       // If the user is authenticated, create a new Stripe Checkout session
+    fetch('https://l2lb4u3n62.execute-api.eu-west-2.amazonaws.com/dev', {
+      method: 'POST',
+    })
+      .then(response => response.json())
+      .then(data => {
+        // Redirect to Stripe Checkout
+        const stripe = stripe(process.env.STRIPE_SECRET_KEY);
+        stripe.redirectToCheckout({ sessionId: data.id });
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
     } else {
       // If the user is not authenticated, show a message
       setShowAlert(true);

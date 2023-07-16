@@ -1,4 +1,20 @@
 {
+  "api": {
+    "StripeAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "machinelearningapp": {
       "customAuth": false,
@@ -37,6 +53,32 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_StripePayment_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ]
+    },
+    "AMPLIFY_function_StripePayment_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ]
+    },
+    "AMPLIFY_function_StripePayment_stripeSecretKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ]
     }
   }
 }
