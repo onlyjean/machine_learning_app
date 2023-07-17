@@ -20,7 +20,7 @@ export default function PlanCard({
 
   const handleButtonClick = async () => {
   if (isAuthenticated) {
-    const response = await API.post('StripeAPI','https://l2lb4u3n62.execute-api.eu-west-2.amazonaws.com/dev/create-checkout-session', {
+    const response = await API.post('StripeAPI','https://l2lb4u3n62.exeacute-api.eu-west-2.amazonaws.com/dev/create-checkout-session', {
       method: 'POST',
     })
     const session = await response.json();
