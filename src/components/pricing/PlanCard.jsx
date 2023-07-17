@@ -15,28 +15,26 @@ export default function PlanCard({
 }) {
 
   const [showAlert, setShowAlert] = useState(false);
+  const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
-  const handleButtonClick = () => {
-    if (isAuthenticated) {
-       // If the user is authenticated, create a new Stripe Checkout session
-    fetch('https://l2lb4u3n62.execute-api.eu-west-2.amazonaws.com/dev', {
+  const handleButtonClick = async () => {
+  if (isAuthenticated) {
+    const response = await fetch('https://l2lb4u3n62.execute-api.eu-west-2.amazonaws.com/dev', {
       method: 'POST',
     })
-      .then(response => response.json())
-      .then(data => {
-        // Redirect to Stripe Checkout
-        const stripe = stripe(process.env.STRIPE_SECRET_KEY);
-        stripe.redirectToCheckout({ sessionId: data.id });
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-    } else {
-      // If the user is not authenticated, show a message
-      setShowAlert(true);
-      setTimeout(() => setShowAlert(false), 10000); // auto-hide after 10 seconds
+    const session = await response.json();
+    const stripe = await stripePromise;
+    const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
+    if (error) {
+      console.error('Error:', error);
     }
-  };
+  } else {
+    // If the user is not authenticated, show a message
+    setShowAlert(true);
+    setTimeout(() => setShowAlert(false), 10000); // auto-hide after 10 seconds
+  }
+};
+
 
   
   return (
