@@ -5,7 +5,13 @@
       "name": "/create-checkout-session",
       "lambdaFunction": "StripePayment",
       "permissions": {
-        "setting": "open"
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
       }
     }
   }
