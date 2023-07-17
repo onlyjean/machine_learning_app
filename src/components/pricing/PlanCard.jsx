@@ -16,14 +16,17 @@ export default function PlanCard({
 
   const [showAlert, setShowAlert] = useState(false);
   const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+  console.log(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
 
   const handleButtonClick = async () => {
   if (isAuthenticated) {
-    const response = await fetch('https://l2lb4u3n62.execute-api.eu-west-2.amazonaws.com/dev', {
+    const response = await API.post('StripeAPI','https://l2lb4u3n62.execute-api.eu-west-2.amazonaws.com/dev/create-checkout-session', {
       method: 'POST',
     })
     const session = await response.json();
     const stripe = await stripePromise;
+    console.log('Session data from server:', session);
+    console.log('Attempting to redirect to checkout with session ID:', session.id);
     const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
     if (error) {
       console.error('Error:', error);

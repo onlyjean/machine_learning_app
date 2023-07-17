@@ -33,19 +33,14 @@ app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: [{
-      price_data: {
-        currency: 'gbp',
-        product_data: {
-          name: 'Premium Plan',
-        },
-        unit_amount: 0,  // $10.00
-      },
+      price: 'price_1NUUb5GGfDL03j8njMw0Myta',  // Using the price ID directly
       quantity: 1,
     }],
     mode: 'subscription',
     success_url: 'http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}',
     cancel_url: 'http://localhost:3000/cancel',
-  })
+  });
+  res.json({ id: session.id });
 });
 
 

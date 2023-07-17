@@ -19,7 +19,7 @@
       "function": {
         "StripePayment": {
           "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
-          "s3Key": "amplify-builds/StripePayment-4e556a7141306f6e5a76-build.zip",
+          "s3Key": "amplify-builds/StripePayment-7a396a2b535030315a37-build.zip",
           "stripeSecretKey": "sk_test_51NUULNGGfDL03j8n21StZV7p1fUznAxM6VngXXxwEQKt17X3cYn8vx5uo84hYI0ujz2n8w8Q6PtdWmsiPCzx7cde00oLRbqbAk"
         }
       },
