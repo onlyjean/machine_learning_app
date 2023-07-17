@@ -10,6 +10,9 @@
     "express": "^4.15.2"
   },
   "devDependencies": {
-    "@types/aws-lambda": "^8.10.92"
+    "@types/aws-lambda": "^8.10.92",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "stripe": "^8.145.0"
   }
 }
