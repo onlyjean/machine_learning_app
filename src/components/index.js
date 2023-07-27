@@ -5,5 +5,7 @@ export { default as SignedInNav } from './navbar/SignedInNav';
 export { default as Algo } from './ml-algo/Algo'
 export {default as Pricing} from './pricing/Pricing' 
 export {default as SignIn} from './signin/SignIn'
+export {default as CTA} from './cta/CTA'
+
 
 
