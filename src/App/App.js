@@ -3,7 +3,7 @@ import '@aws-amplify/ui-react/styles.css';
 import { Auth } from 'aws-amplify';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
-import { Algo, BrandLogo, Nav, Pricing, SignIn, SignedInNav, CTA } from '../components';
+import { Algo, BrandLogo, CTA, Nav, Pricing, SignIn, SignedInNav } from '../components';
 import { Footer, Header, ML, SignedInHeader } from '../containers';
 import './App.css';
 
@@ -14,6 +14,7 @@ import './App.css';
 const HomePage = () => {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   useEffect(() => {
     checkAuthState();
@@ -27,6 +28,11 @@ const HomePage = () => {
       setIsAuthenticated(false);
     }
   };
+
+
+
+
+
   return (
     
     
@@ -61,9 +67,12 @@ const HomePage = () => {
 const SignedInUser = () => {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
 
   useEffect(() => {
     checkAuthState();
+    checkSubscriptionStatus();
   }, []);
 
   const checkAuthState = async () => {
@@ -74,6 +83,25 @@ const SignedInUser = () => {
       setIsAuthenticated(false);
     }
   };
+
+
+  const checkSubscriptionStatus = async () => {
+    try {
+      const user = await Auth.currentAuthenticatedUser();
+      const response = await fetch('/check-subscriptions');
+      const data = await response.json();
+      console.log('Subscription data:', data);  // Log the data
+      const currentUserStatus = data.find(status => status.email === user.attributes.email);
+      console.log('Current user status:', currentUserStatus);  // Log the user's status
+      setIsSubscribed(currentUserStatus?.isSubscribed || false);
+    } catch (e) {
+      console.error("Failed to check subscription status", e);
+    }
+  };
+  
+
+
+
   return (
     
     
@@ -81,7 +109,7 @@ const SignedInUser = () => {
       
       <div className='gradient__background'>
         < SignedInNav />
-        <CTA/>
+        <CTA isSubscribed={isSubscribed} />
         < SignedInHeader />
       </div>
 

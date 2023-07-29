@@ -13,6 +13,20 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "API Gateway"
+    },
+    "checkSubs": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "checkSub"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
     }
   },
   "auth": {
@@ -53,6 +67,12 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "checkSub": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "parameters": {
@@ -77,6 +97,22 @@
         {
           "category": "function",
           "resourceName": "StripePayment"
+        }
+      ]
+    },
+    "AMPLIFY_function_checkSub_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "checkSub"
+        }
+      ]
+    },
+    "AMPLIFY_function_checkSub_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "checkSub"
         }
       ]
     }
