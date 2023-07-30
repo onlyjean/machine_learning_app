@@ -88,7 +88,7 @@ const SignedInUser = () => {
   const checkSubscriptionStatus = async () => {
     try {
       const user = await Auth.currentAuthenticatedUser();
-      const response = await fetch('/check-subscriptions');
+      const response = await fetch('https://b6ucsfgkjd.execute-api.eu-west-2.amazonaws.com/dev/check-subscriptions');      
       const data = await response.json();
       console.log('Subscription data:', data);  // Log the data
       const currentUserStatus = data.find(status => status.email === user.attributes.email);

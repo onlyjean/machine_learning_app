@@ -24,7 +24,7 @@
         },
         "checkSub": {
           "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
-          "s3Key": "amplify-builds/checkSub-485a3837595a7366414f-build.zip"
+          "s3Key": "amplify-builds/checkSub-75306c67333444343637-build.zip"
         }
       },
       "api": {

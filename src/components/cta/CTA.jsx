@@ -12,6 +12,12 @@ const CTA = ({ isSubscribed }) => {  // isSubscribed is a prop that indicates wh
     }
   }
 
+    const handleLRClick = () => {
+    // Redirect the user to the Streamlit app without checking the subscription status
+    window.location.href = "http://localhost:8501/";
+  }
+  
+
   return (
     <div className='ml__cta'>
         <div className='ml__cta-content'>
@@ -20,6 +26,7 @@ const CTA = ({ isSubscribed }) => {  // isSubscribed is a prop that indicates wh
         </div>
         <div className='ml__cta-button'>
            <button type='button' onClick={handleClick}>Linear Regression</button> 
+            <button type='button' onClick={handleLRClick}>LR</button> 
         </div>
     </div>
   )
