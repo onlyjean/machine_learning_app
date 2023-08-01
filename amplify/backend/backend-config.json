@@ -100,6 +100,14 @@
         }
       ]
     },
+    "AMPLIFY_function_StripePayment_stripeWebhookSecret": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ]
+    },
     "AMPLIFY_function_checkSub_deploymentBucketName": {
       "usedBy": [
         {

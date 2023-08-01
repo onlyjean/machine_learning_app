@@ -13,6 +13,19 @@
           "delete"
         ]
       }
+    },
+    "/webhook": {
+      "name": "/webhook",
+      "lambdaFunction": "StripePayment",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
     }
   }
 }

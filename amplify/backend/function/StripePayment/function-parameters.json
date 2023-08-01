@@ -4,6 +4,10 @@
     {
       "cloudFormationParameterName": "stripeSecretKey",
       "environmentVariableName": "STRIPE_SECRET_KEY"
+    },
+    {
+      "cloudFormationParameterName": "stripeWebhookSecret",
+      "environmentVariableName": "STRIPE_WEBHOOK_SECRET"
     }
   ]
 }
