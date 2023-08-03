@@ -3,7 +3,7 @@ import '@aws-amplify/ui-react/styles.css';
 import { Auth } from 'aws-amplify';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
-import { Algo, BrandLogo, CTA, Nav, Pricing, SignIn, SignedInNav } from '../components';
+import { Algo, BrandLogo, CTA, Nav, Pricing, SignIn, SignedInNav,PaymentSuccess } from '../components';
 import { Footer, Header, ML, SignedInHeader } from '../containers';
 import './App.css';
 
@@ -159,6 +159,7 @@ const SignedInUser = () => {
           <Route path='/signin' element={<SignIn />} />
           <Route path='/signup' element={<SignIn />} /> 
           <Route path='/signedIn' element={<SignedInUser />} /> 
+          <Route path="/success" element={<PaymentSuccess />} />
 
 
       </Routes>  
