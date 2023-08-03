@@ -9,7 +9,29 @@
       "UnauthRoleName": "amplify-machinelearningapp-dev-154057-unauthRole",
       "StackName": "amplify-machinelearningapp-dev-154057",
       "StackId": "arn:aws:cloudformation:eu-west-2:954432212477:stack/amplify-machinelearningapp-dev-154057/49a13450-1cd4-11ee-8622-0ae24c717924",
-      "AmplifyAppId": "dsxr40yvbyhag"
+      "AmplifyAppId": "dsxr40yvbyhag",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-machinelearningapp-dev-154057-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "machinelearningapp": {}
+      },
+      "function": {
+        "StripePayment": {
+          "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
+          "s3Key": "amplify-builds/StripePayment-6a38772f2f6464324246-build.zip",
+          "stripeSecretKey": "sk_test_51NUULNGGfDL03j8n21StZV7p1fUznAxM6VngXXxwEQKt17X3cYn8vx5uo84hYI0ujz2n8w8Q6PtdWmsiPCzx7cde00oLRbqbAk",
+          "stripeWebhookSecret": "whsec_V0xZB2jQHSHXZGzfKEHWecnf3lOLvWvg"
+        },
+        "checkSub": {
+          "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
+          "s3Key": "amplify-builds/checkSub-75306c67333444343637-build.zip"
+        }
+      },
+      "api": {
+        "StripeAPI": {},
+        "checkSubs": {}
+      }
     }
   }
 }

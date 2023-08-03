@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "paths": {
+    "/check-subscriptions": {
+      "name": "/check-subscriptions",
+      "lambdaFunction": "checkSub",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

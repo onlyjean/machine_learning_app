@@ -1,0 +1,245 @@
+ .ml__whatML{
+display: flex;
+flex-direction: column;
+
+padding: 2rem;
+
+ /* ff 3.6+ */
+ background: -moz-radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
+
+ /* safari 5.1+,chrome 10+ */
+ background: -webkit-radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
+
+ /* opera 11.10+ */
+ background: -o-radial-gradient(circle at 5% 25%, #002853 0%, #6400A1 100%);
+
+ /* ie 10+ */
+ background: -ms-radial-gradient(circle at 50% -100%, #000 80%, #6400A1 100%);
+
+ /* global 92%+ browsers support */
+ background: radial-gradient(circle at 50% -100%, #000 80%, #6400A1 100%);
+}
+
+.ml__whatML-feature {
+    display: flex;
+    margin: 1rem 7rem;
+    max-width: 100%;
+    align-items: flex-start;
+}
+
+
+.ml__whatML-feature .ml__features-container__feature {
+    margin: 1rem;
+}
+
+.ml__whatML-feature .ml__features-container__feature-text {
+    max-width: 1500px;
+}
+
+.ml__whatML-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6rem 8rem 6rem;
+    margin-right: 14rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+.ml__whatML-heading h1 {
+    font-family: var(--font-family);
+    font-size: 40px;
+    font-weight: 1000;
+    line-height: 45px;
+    max-width: 1000px;
+
+}
+
+.ml__whatML-heading p {
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+
+    color: var(--color-subtext);
+    cursor: pointer;
+
+}
+
+.ml__whatML-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* margin: 2rem 8rem; */
+    
+
+    margin-top: 2rem;
+}
+
+.ml__whatML-container .ml__features-container__feature {
+    flex: 1;
+    flex-direction: column;
+    max-width: 210%;
+    display: unset;
+    margin: 2rem 8rem;
+ }
+
+
+
+ .ml__whatML-container .ml__features-container__feature {
+    
+    margin-top: 0.5rem;
+ }
+ 
+ @media screen and (max-width: 1440px){
+
+    .ml__whatML-feature .ml__features-container__feature-text {
+        margin-top: 0.5rem;
+    }
+    
+    .ml__whatML-container .ml__features-container__feature {
+        max-width: 100%;
+        margin: 1rem 0;
+        
+     } 
+    
+     .ml__whatML-container {
+        flex-direction: row;
+     }
+    
+    
+    
+     .ml__whatML-feature  {
+        max-width: 100%;
+        margin: 1rem 0;
+    
+     }
+    
+    
+     .ml__whatML-heading {
+        max-width: 100%;
+        margin: 1rem 0;
+    
+     }
+
+ }
+
+
+ @media screen and (max-width: 850px){
+   /* .ml__whatML-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0rem;
+   } */
+
+   /* .ml__whatML-heading p {
+    margin-top: 1rem;
+   } */
+
+   .ml__whatML-feature .ml__features-container__feature-text {
+    margin-top: 0.5rem;
+}
+
+.ml__whatML-container .ml__features-container__feature {
+    max-width: 100%;
+    margin: 1rem 0;
+    
+ } 
+
+ .ml__whatML-container {
+    flex-direction: column;
+ }
+
+
+
+ .ml__whatML-feature  {
+    max-width: 100%;
+    margin: 1rem 0;
+
+ }
+
+
+ .ml__whatML-heading {
+    max-width: 100%;
+    margin: 1rem 0;
+    flex-direction: column;
+
+
+ }
+
+  }
+
+  @media screen and (max-width: 650px){
+   
+    .ml__whatML-heading h1 {
+        line-height: 40px;
+        font-size: 24px;
+        
+       }
+
+    /* .ml__whatML-feature .ml__features-container__feature {
+       flex-direction: column;
+       
+    } */
+    
+    .ml__whatML-feature .ml__features-container__feature-text {
+        margin-top: 0.5rem;
+    }
+
+    .ml__whatML-container .ml__features-container__feature {
+        max-width: 100%;
+        margin: 1rem 0;
+        
+     } 
+
+     .ml__whatML-container {
+        flex-direction: column;
+     }
+
+
+    
+     .ml__whatML-feature  {
+        max-width: 100%;
+        margin: 1rem 0;
+    
+     }
+    
+    
+     .ml__whatML-heading {
+        max-width: 100%;
+        margin: 1rem 0;
+    
+    
+     }
+   
+  }
+
+  @media screen and (max-width: 350px){
+   
+
+  .ml__whatML-container .ml__features-container__feature {
+    max-width: 100%;
+    margin: 1rem 0;
+    
+ } 
+
+ .ml__whatML-feature  {
+    max-width: 100%;
+    margin: 1rem 0;
+
+ }
+
+
+ .ml__whatML-heading {
+    max-width: 100%;
+    margin: 1rem 0;
+
+
+ }
+
+}
+ 
+
+
+

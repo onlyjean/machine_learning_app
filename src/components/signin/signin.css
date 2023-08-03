@@ -1,0 +1,51 @@
+.signIn-background{
+    background-image: url("https://images.unsplash.com/photo-1517245386807-9b4d0ddda4e7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhdXR5JTIwY2FyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.amplify-card {
+    background-color: var(--amplify-colors-neutral-100);
+
+
+  }
+
+
+  .button-container {
+
+
+        position: fixed; 
+        top: 20px; 
+        left: 0px; 
+        right: 0; 
+        text-align: center; 
+    
+      
+  }
+
+   .signin-button {
+    
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: var(--gradient-brandcustom);
+    font-family: var(--font-family);
+    font-weight: 500;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 25px;
+    cursor: pointer;
+  }
+   
+
+   

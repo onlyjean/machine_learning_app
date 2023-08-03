@@ -1,1 +1,128 @@
-{}
+{
+  "api": {
+    "StripeAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "checkSubs": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "checkSub"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "machinelearningapp": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "StripePayment": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "checkSub": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_StripePayment_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ]
+    },
+    "AMPLIFY_function_StripePayment_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ]
+    },
+    "AMPLIFY_function_StripePayment_stripeSecretKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ]
+    },
+    "AMPLIFY_function_StripePayment_stripeWebhookSecret": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ]
+    },
+    "AMPLIFY_function_checkSub_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "checkSub"
+        }
+      ]
+    },
+    "AMPLIFY_function_checkSub_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "checkSub"
+        }
+      ]
+    }
+  }
+}
