@@ -44,8 +44,8 @@ app.post('/create-checkout-session', async (req, res) => {
       quantity: 1,
     }],
     mode: 'subscription',
-    success_url: 'http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}',
-    cancel_url: 'http://localhost:3000/signedin',
+    success_url: 'https://main.dsxr40yvbyhag.amplifyapp.com/success?session_id={CHECKOUT_SESSION_ID}',
+    cancel_url: 'https://main.dsxr40yvbyhag.amplifyapp.com/signedin',
     client_reference_id: username,  // Set the client_reference_id to the username
     metadata: {  // Add metadata field
       username: username,  // Include username in the metadata
