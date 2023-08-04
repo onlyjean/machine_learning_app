@@ -1,14 +1,18 @@
 import google from '../../assets/google.png'
-import airflow from '../../assets/google.png'
-import aws from '../../assets/google.png'
-import docker from '../../assets/google.png'
-import kubernetes from '../../assets/google.png'
+import streamlit from '../../assets/streamlit.png'
+import aws from '../../assets/aws.png'
+import docker from '../../assets/docker.png'
+import mlflow from '../../assets/mlflow.png'
+import reactlogo from '../../assets/react.png'
+import python from '../../assets/python.png'
+
 
 export {
     google,
-    airflow,
+    streamlit,
     aws,
+    reactlogo,
     docker,
-    kubernetes,
-    
+    python,
+    mlflow,
 }

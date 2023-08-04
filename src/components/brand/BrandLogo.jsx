@@ -1,6 +1,6 @@
 import React from 'react';
 import './brand.css'
-import {google, airflow, aws, docker, kubernetes} from './imgImports'
+import {google, streamlit, aws, reactlogo, docker, python, mlflow} from './imgImports'
 
 const Brand = () => {
   return (
@@ -9,16 +9,22 @@ const Brand = () => {
         <img src={google} alt='google' />
        </div>
        <div>
+        <img src={streamlit} alt='streamlit' />
+       </div>
+       <div>
         <img src={aws} alt='aws' />
        </div>
        <div>
-        <img src={airflow} alt='airflow' />
+        <img src={reactlogo} alt='reactlogog' />
        </div>
        <div>
         <img src={docker} alt='docker' />
        </div>
        <div>
-        <img src={kubernetes} alt='kubernetes' />
+        <img src={python} alt='python' />
+       </div>
+       <div>
+        <img src={mlflow} alt='mlflow' />
        </div>
     </div>
   )
