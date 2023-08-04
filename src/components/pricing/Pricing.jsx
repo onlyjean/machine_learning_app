@@ -8,7 +8,7 @@ const Pricing = ({isAuthenticated}) => {
       <div className="pricing-header gradient__text">
         <h1 id='pricing'>Pricing</h1>
         <p>
-          Subscribe for our premium plan and get access to all our features.
+          Subscribe for our premium plan and get access to advanced models and features.
         </p>
       </div>
       
@@ -19,7 +19,7 @@ const Pricing = ({isAuthenticated}) => {
           name="Premium"
           description="Get more advanced"
           price="10"
-          features={['Real-Time Predictions', 'Online Machine Larning Models', 'Unlimited Predictions']}
+          features={['LSTM Model Predictions', 'Unlimited Predictions']}
           buttonText="Start Premium Plan"
         />
       </div>

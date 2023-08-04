@@ -14,7 +14,6 @@ import './App.css';
 const HomePage = () => {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
 
   useEffect(() => {
     checkAuthState();

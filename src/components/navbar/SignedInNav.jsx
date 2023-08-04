@@ -12,8 +12,6 @@ const Menu = () => (
   <p><a href='#about'>About Us</a></p>
   <p><a href='#algo'>Machine Learning</a></p>
   <p><a href='#pricing'>Pricing</a></p>
-  <p><a href='#features'>Capabilities</a></p>
-  <p><a href='#stock'>Stock Market</a></p>
   </>
   
 )

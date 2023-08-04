@@ -15,8 +15,8 @@ const ML = () => {
       </div>
       <div className='ml__whatML-container'>
       <Features title='Learn' text='Embark on a journey with FuturStox to deepen your understanding of financial markets and machine learning, empowering you with comprehensive knowledge for informed decision-making.' />
-      <Features title='Tune' text='FuturStox is not just about providing predictions—it is about personalising your experience. Our platform offers users the unique opportunity to tune the machine learning models to their preferences.' />
-      <Features title='Predict' text='FuturStox near real-time prediction, powered by sophisticated AI insights, provides you with accurate stock price forecasts, making it your reliable partner in navigating the dynamic world of investments.' />
+      <Features title='Tune' text='FuturStox is not just about providing predictions — it is about personalising your experience. Our platform offers users the unique opportunity to tune the machine learning models to their preferences.' />
+      <Features title='Predict' text='FuturStox prediction, powered by sophisticated AI insights, provides you with accurate stock price forecasts, making it your reliable partner in navigating the dynamic world of investments.' />
       </div>
     </div>
   )
