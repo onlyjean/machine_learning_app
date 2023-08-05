@@ -1,5 +1,5 @@
-import React from 'react'
-import './cta.css'
+import React from 'react';
+import './cta.css';
 
 const CTA = ({ isSubscribed }) => {  // isSubscribed is a prop that indicates whether the user is subscribed or not
   // const handleLSTMClick = () => {
@@ -14,7 +14,7 @@ const CTA = ({ isSubscribed }) => {  // isSubscribed is a prop that indicates wh
 
   const handleLSTMClick = () => {
         // Redirect the user to the Streamlit app without checking the subscription status
-      window.open("https://lstm-streamlit.onrender.com", '_blank');
+      window.open("https://streamlit-lstm-app-kkl5inde2q-uc.a.run.app", '_blank');
     
   }
 
@@ -22,7 +22,7 @@ const CTA = ({ isSubscribed }) => {  // isSubscribed is a prop that indicates wh
 
     const handleLRClick = () => {
     // Redirect the user to the Streamlit app without checking the subscription status
-    window.open("https://linear-regression-streamlit.onrender.com", '_blank');
+    window.open("https://streamlit-linear-app-kkl5inde2q-ew.a.run.app", '_blank');
     }
 
   const handleTradeClick = () => {
