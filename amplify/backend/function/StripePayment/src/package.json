@@ -5,11 +5,13 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
+    "aws-sdk": "^2.1425.0",
     "aws-serverless-express": "^3.3.5",
+    "aws4": "^1.12.0",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
-    "stripe": "^8.145.0",
-    "aws-sdk": "^2.1425.0"
+    "node-fetch": "^2.6.12",
+    "stripe": "^8.145.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.92"

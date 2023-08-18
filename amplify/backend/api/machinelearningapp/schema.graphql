@@ -1,4 +1,14 @@
 type Users @model @auth(rules: [{allow: public}]) {
   id: ID!
   email: String!
+  subscription: StripeSubscription @hasOne
+}
+
+type StripeSubscription @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  stripeSubscriptionId: String!
+  plan: String!
+  status: String!
+  userId: ID!
+  user: Users @belongsTo(fields: ["userId"])
 }
