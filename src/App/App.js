@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { Algo, BrandLogo, CTA, Nav, Pricing, SignIn, SignedInNav,PaymentSuccess } from '../components';
 import { Footer, Header, ML, SignedInHeader } from '../containers';
 import './App.css';
+import { User } from 'react-feather';
 
 
 
@@ -67,7 +68,7 @@ const SignedInUser = () => {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-
+  const [Username, setUsername] = useState(null);  // New state variable for Username
 
   useEffect(() => {
     checkAuthState();
@@ -83,15 +84,13 @@ const SignedInUser = () => {
     }
   };
 
-
   const checkSubscriptionStatus = async () => {
     try {
       const user = await Auth.currentAuthenticatedUser();
+      setUsername(user.username);  // Set the Username
       const response = await fetch('https://b6ucsfgkjd.execute-api.eu-west-2.amazonaws.com/dev/check-subscriptions');      
       const data = await response.json();
-      console.log('Subscription data:', data);  // Log the data
-      const currentUserStatus = data.find(status => status.email === user.attributes.email);
-      console.log('Current user status:', currentUserStatus);  // Log the user's status
+      const currentUserStatus = data.find(status => status.Username === user.attributes.Username);
       setIsSubscribed(currentUserStatus?.isSubscribed || false);
     } catch (e) {
       console.error("Failed to check subscription status", e);
@@ -108,7 +107,7 @@ const SignedInUser = () => {
       
       <div className='gradient__background'>
         < SignedInNav />
-        <CTA isSubscribed={isSubscribed} />
+        <CTA isSubscribed={isSubscribed} username={Username} />
         < SignedInHeader />
       </div>
 
