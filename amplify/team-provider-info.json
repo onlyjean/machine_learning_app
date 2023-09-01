@@ -20,21 +20,24 @@
       "function": {
         "StripePayment": {
           "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
-          "s3Key": "amplify-builds/StripePayment-64345945677a4734474b-build.zip",
+          "s3Key": "amplify-builds/StripePayment-7a76776b7a664972584e-build.zip",
           "stripeSecretKey": "sk_test_51NUULNGGfDL03j8n21StZV7p1fUznAxM6VngXXxwEQKt17X3cYn8vx5uo84hYI0ujz2n8w8Q6PtdWmsiPCzx7cde00oLRbqbAk",
-          "stripeWebhookSecret": "whsec_V0xZB2jQHSHXZGzfKEHWecnf3lOLvWvg"
+          "stripeWebhookSecret": "whsec_V0xZB2jQHSHXZGzfKEHWecnf3lOLvWvg",
+          "appsyncUrl": "https://y4phlwteercpflrdx6pawip3dm.appsync-api.eu-west-2.amazonaws.com/graphql",
+          "appsyncApiKey": "da2-q5rjn4gqwnfyza3h4pccmvcipm"
         },
         "checkSub": {
           "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
-          "s3Key": "amplify-builds/checkSub-75306c67333444343637-build.zip"
+          "s3Key": "amplify-builds/checkSub-75306c67333444343637-build.zip",
+          "stripeSecretKey": "sk_test_51NUULNGGfDL03j8n21StZV7p1fUznAxM6VngXXxwEQKt17X3cYn8vx5uo84hYI0ujz2n8w8Q6PtdWmsiPCzx7cde00oLRbqbAk"
         },
         "machinelearningappPreSignup": {
           "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
-          "s3Key": "amplify-builds/machinelearningappPreSignup-4364582b333176524932-build.zip"
+          "s3Key": "amplify-builds/machinelearningappPreSignup-775a445256796d4d6d35-build.zip"
         },
         "stripeWebhookHandler": {
           "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
-          "s3Key": "amplify-builds/stripeWebhookHandler-78496a42506b2f2b6a73-build.zip",
+          "s3Key": "amplify-builds/stripeWebhookHandler-542b7a4a436341473868-build.zip",
           "stripeSecretKey": "sk_test_51NUULNGGfDL03j8n21StZV7p1fUznAxM6VngXXxwEQKt17X3cYn8vx5uo84hYI0ujz2n8w8Q6PtdWmsiPCzx7cde00oLRbqbAk"
         }
       },

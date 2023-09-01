@@ -2,21 +2,23 @@ import React from 'react';
 import './cta.css';
 
 const CTA = ({ isSubscribed }) => {  // isSubscribed is a prop that indicates whether the user is subscribed or not
-  // const handleLSTMClick = () => {
-  //   if (isSubscribed) {
-  //     // If the user is subscribed, redirect them to the Streamlit app
-  //     window.open("https://lstm-streamlit.onrender.com", '_blank');
-  //       } else {
-  //     // If the user is not subscribed, show an error message
-  //     alert("You must be a subscribed customer to access this feature.");
-  //   }
-  // }
-
   const handleLSTMClick = () => {
-        // Redirect the user to the Streamlit app without checking the subscription status
-      window.open("https://streamlit-lstm-app-kkl5inde2q-uc.a.run.app", '_blank');
-    
+    if (isSubscribed) {
+      // If the user is subscribed, redirect them to the Streamlit app
+      window.open("https://lstm-streamlit.onrender.com", '_blank');
+        } else {
+      // If the user is not subscribed, show an error message
+      alert("You must be a subscribed customer to access this feature.");
+      // setShowAlert(true);
+      // setTimeout(() => setShowAlert(false), 10000); // auto-hide after 10 seconds
+    }
   }
+
+  // const handleLSTMClick = () => {
+  //       // Redirect the user to the Streamlit app without checking the subscription status
+  //     window.open("https://streamlit-lstm-app-kkl5inde2q-uc.a.run.app", '_blank');
+    
+  // }
 
 
 

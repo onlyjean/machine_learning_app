@@ -46,6 +46,8 @@ app.get('/check-subscriptions', async (req, res) => {
       customer: stripeCustomerId,
     });
 
+    console.log("Stripe Subscriptions Data:", subscriptions);
+    
     // Check if the user has an active subscription
   const isSubscribed = subscriptions.data.some(subscription => subscription.status === 'active');
 

@@ -38,10 +38,10 @@ const makeGraphQLRequest = async (query, variables) => {
     // Signing the request using AWS Signature Version 4
     const signedRequest = aws4.sign({
         method: 'POST',
-        url: 'https://y4phlwteercpflrdx6pawip3dm.appsync-api.eu-west-2.amazonaws.com/graphql',
+        url: process.env.APPSYNC_URL,
         headers: {
             'Content-Type': 'application/json',
-            'x-api-key': 'da2-q5rjn4gqwnfyza3h4pccmvcipm'
+            'x-api-key': process.env.APPSYNC_API_KEY
         },
         body: JSON.stringify(requestBody),
         service: 'appsync',
@@ -77,11 +77,13 @@ app.post('/create-checkout-session', bodyParser.json(), async (req, res) => {
         mode: 'subscription',
         success_url: 'http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}',
         cancel_url: 'http://localhost:3000/signedin',
-        client_reference_id: username,
-        metadata: {
-            username: username,
-        },
+        // client_reference_id: username,
+        // metadata: {
+        //     username: username,
+        // },
     });
+
+    // console.log("Creating Stripe session with username:", username);
 
     console.log("Stripe session created:", session);
 
@@ -135,15 +137,22 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res
     // Handling different Stripe event types
     if (event.type === 'checkout.session.completed') {
         const session = event.data.object;
-        const username = session.client_reference_id;
-
-        console.log(`Username: ${username}`);
+        const customerEmail = session.customer_details.email;  // Retrieve customer's email from session
+        
+        console.log(`Customer Email: ${customerEmail}`);
         console.log(`Customer ID: ${session.customer}`);
+    
+        if (!customerEmail) {
+            console.error("Customer email is null. Cannot proceed.");
+            return res.status(400).send("Customer email is missing");
+        }
+    
 
+        // Updating user attributes in AWS Cognito
         try {
             await cognito.adminUpdateUserAttributes({
                 UserPoolId: 'eu-west-2_d852nM2qL',
-                Username: username,
+                Username: customerEmail,
                 UserAttributes: [
                     {
                         Name: 'custom:stripeCustomerId',
@@ -151,8 +160,8 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res
                     },
                 ],
             }).promise();
-            console.log(`Updated Stripe customer ID for user ${username}`);
-        } catch (error) {
+            console.log(`Updated Stripe customer ID for user ${customerEmail}`);
+                } catch (error) {
             console.error(`Error updating user attributes: ${error}`);
         }
 
@@ -160,18 +169,20 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res
             stripeSubscriptionId: session.id,
             plan: 'LSTM Model',
             status: 'active',
-            userId: username
+            userId: customerEmail
         };
 
+
+        // Updating StripeSubscription record in GraphQL
         try {
             const result = await makeGraphQLRequest(`
-                mutation UpdateStripeSubscription($input: UpdateStripeSubscriptionInput!, $username: String!) {
-                    updateStripeSubscription(input: $input, username: $username) {
+                mutation UpdateStripeSubscription($input: UpdateStripeSubscriptionInput!, $email: String!) {
+                    updateStripeSubscription(input: $input, email: $email) {
                         id
                         stripeSubscriptionId
                     }
                 }
-            `, { input: subscriptionData }, username);
+            `, { input: subscriptionData }, customerEmail);
             console.log("StripeSubscription record updated:", result);
         } catch (error) {
             console.error("Error updating StripeSubscription record:", error);

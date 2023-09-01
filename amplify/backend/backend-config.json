@@ -131,6 +131,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_StripePayment_appsyncApiKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ]
+    },
+    "AMPLIFY_function_StripePayment_appsyncUrl": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "StripePayment"
+        }
+      ]
+    },
     "AMPLIFY_function_StripePayment_deploymentBucketName": {
       "usedBy": [
         {
@@ -172,6 +188,14 @@
       ]
     },
     "AMPLIFY_function_checkSub_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "checkSub"
+        }
+      ]
+    },
+    "AMPLIFY_function_checkSub_stripeSecretKey": {
       "usedBy": [
         {
           "category": "function",

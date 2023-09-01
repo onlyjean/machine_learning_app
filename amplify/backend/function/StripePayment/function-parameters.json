@@ -8,6 +8,14 @@
     {
       "cloudFormationParameterName": "stripeWebhookSecret",
       "environmentVariableName": "STRIPE_WEBHOOK_SECRET"
+    },
+    {
+      "cloudFormationParameterName": "appsyncUrl",
+      "environmentVariableName": "APPSYNC_URL"
+    },
+    {
+      "cloudFormationParameterName": "appsyncApiKey",
+      "environmentVariableName": "APPSYNC_API_KEY"
     }
   ]
 }

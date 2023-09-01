@@ -21,6 +21,12 @@
     },
     "stripeWebhookSecret": {
       "Type": "String"
+    },
+    "appsyncUrl": {
+      "Type": "String"
+    },
+    "appsyncApiKey": {
+      "Type": "String"
     }
   },
   "Conditions": {
@@ -81,6 +87,12 @@
             },
             "STRIPE_WEBHOOK_SECRET": {
               "Ref": "stripeWebhookSecret"
+            },
+            "APPSYNC_URL": {
+              "Ref": "appsyncUrl"
+            },
+            "APPSYNC_API_KEY": {
+              "Ref": "appsyncApiKey"
             }
           }
         },
