@@ -1,3 +1,4 @@
+// Importing required modules
 const express = require('express');
 const bodyParser = require('body-parser');
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware');
@@ -7,10 +8,12 @@ const cognito = new AWS.CognitoIdentityServiceProvider();
 const fetch = require('node-fetch');
 const aws4 = require('aws4');
 
+
+// Initialising the Express app
 const app = express();
-// app.use(bodyParser.json());
 app.use(awsServerlessExpressMiddleware.eventContext());
 
+// Middleware for logging and setting CORS headers
 app.use(function(req, res, next) {
     console.log("Received request:", req.method, req.url);
     console.log("Request headers:", req.headers);
@@ -20,15 +23,19 @@ app.use(function(req, res, next) {
     next();
 });
 
+
+// Function to make GraphQL requests
 const makeGraphQLRequest = async (query, variables) => {
     console.log("Making GraphQL request with query:", query);
     console.log("Variables:", variables);
 
+    // Preparing the request body
     const requestBody = {
         query: query,
         variables: variables
     };
 
+    // Signing the request using AWS Signature Version 4
     const signedRequest = aws4.sign({
         method: 'POST',
         url: 'https://y4phlwteercpflrdx6pawip3dm.appsync-api.eu-west-2.amazonaws.com/graphql',
@@ -41,24 +48,25 @@ const makeGraphQLRequest = async (query, variables) => {
         region: 'eu-west-2'
     });
 
+    // Making the fetch request
     const response = await fetch(signedRequest.url, {
         method: 'POST',
         headers: signedRequest.headers,
         body: JSON.stringify(requestBody)
     });
 
+    // Parsing the response
     const responseData = await response.json();
     console.log("GraphQL response:", responseData);
     return responseData;
 };
 
+// Endpoint for creating Stripe checkout session
 app.post('/create-checkout-session', bodyParser.json(), async (req, res) => {  
     console.log("Handling /create-checkout-session endpoint");
-
     console.log("Raw request body:", req.body.toString());
-
-
     const { username } = req.body;
+
 
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
@@ -84,30 +92,34 @@ app.post('/create-checkout-session', bodyParser.json(), async (req, res) => {
         userId: username
     };
 
+
+    // Creating StripeSubscription record in GraphQL
     try {
         const result = await makeGraphQLRequest(`
-            mutation CreateStripeSubscription($input: CreateStripeSubscriptionInput!) {
-                createStripeSubscription(input: $input) {
+            mutation CreateStripeSubscription($input: CreateStripeSubscriptionInput!, $username: String!) {
+                createStripeSubscription(input: $input, username: $username) {
                     id
                     stripeSubscriptionId
                 }
             }
-        `, { input: subscriptionData });
+        `, { input: subscriptionData }, username);
         console.log("StripeSubscription record created:", result);
     } catch (error) {
         console.error("Error creating StripeSubscription record:", error);
     }
+    
 
     res.json({ id: session.id });
 });
 
+
+// Stripe Webhook handler endpoint
 app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res) => {
     console.log("Handling /webhook endpoint");
+    console.log("Raw request body:", req.body.toString('utf8')); 
 
-    console.log("Raw request body:", req.body.toString('utf8')); // Log the raw request body
-
+    // Verifying Stripe signature
     const sig = req.headers['stripe-signature'];
-
     let event;
     try {
         event = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
@@ -119,6 +131,8 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res
     console.log(`Received event with type ${event.type}`);
     console.log(`Event data: ${JSON.stringify(event.data)}`);
 
+
+    // Handling different Stripe event types
     if (event.type === 'checkout.session.completed') {
         const session = event.data.object;
         const username = session.client_reference_id;
@@ -151,17 +165,17 @@ app.post('/webhook', bodyParser.raw({type: 'application/json'}), async (req, res
 
         try {
             const result = await makeGraphQLRequest(`
-                mutation UpdateStripeSubscription($input: UpdateStripeSubscriptionInput!) {
-                    updateStripeSubscription(input: $input) {
+                mutation UpdateStripeSubscription($input: UpdateStripeSubscriptionInput!, $username: String!) {
+                    updateStripeSubscription(input: $input, username: $username) {
                         id
                         stripeSubscriptionId
                     }
                 }
-            `, { input: subscriptionData });
+            `, { input: subscriptionData }, username);
             console.log("StripeSubscription record updated:", result);
         } catch (error) {
             console.error("Error updating StripeSubscription record:", error);
-        }
+        }        
     }
 
     if (event.type === 'customer.subscription.deleted') {

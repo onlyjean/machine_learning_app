@@ -4,9 +4,6 @@ import './header.css';
 
 
 const Header = () => {
-
-
-
   return (
     <div className='ml__header section__padding' id='home'>
       <div className='ml__header-content'>

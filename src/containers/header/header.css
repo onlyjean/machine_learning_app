@@ -1,7 +1,9 @@
+/* Main header container */
 .ml__header {
     display: flex;
 }
 
+/* Content section of the header */
 .ml__header-content {
     flex: 2.3;
     display: flex;
@@ -12,6 +14,8 @@
     margin-right: 5rem;
 }
 
+
+/* Styling for the main title */
 .ml__header-content h1{
     font-family: var(--font-family);
     font-weight: 800;
@@ -20,6 +24,8 @@
     letter-spacing: -0.04em;
 }
 
+
+/* Styling for the paragraph text */
 .ml__header-content p{
     font-family: var(--font-family);
     font-size: 20px;
@@ -30,6 +36,8 @@
     margin-top: 1.5rem;
 }
 
+
+/* Container for email input and button */
 .ml__header-content__input {
     width: 100%;
     margin: 2rem 0 1rem;
@@ -37,6 +45,8 @@
     display: flex;
 }
 
+
+/* Styling for the email input field */
 .ml__header-content__input input {
     flex: 2;
     width: 100%;
@@ -55,6 +65,8 @@
 
 }
 
+
+/* Styling for the Get Started button */
 .ml__header-content__input button {
     flex: 0.6;
     width: 100%;
@@ -75,6 +87,7 @@
    
 }
 
+/* Container for people image and text */
 .ml__header-content__people {
     width: 100%;
     display: flex;
@@ -84,11 +97,8 @@
     margin-top: 2rem;
 }
 
-/* .ml__header-content__people img {
-    width: 181.79px;
-    height: 38px;
-} */
 
+/* Styling for the people text */
 .ml__header-content__people p{
    font-family: var(--font-family);
    font-weight: 500;
@@ -100,6 +110,7 @@
    
 }
 
+/* Container for the laptop image */
 .ml__header-image {
     flex: 1;
     display: flex;
@@ -108,12 +119,17 @@
     object-fit: scale-down;
 }
 
+/* Styling for the laptop image */
 .ml__header-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
    
 }
+
+
+
+/* Media queries for responsive design */
 
 @media screen and (max-width: 1050px){
     .ml__header{
@@ -123,11 +139,6 @@
     .ml__header-content{
         margin: 0 0 3rem;
     }
-    /* .ml__header-content__people p{
-        
-        font-size: 14px;
-        line-height: 34px;
-    } */
   }
 
   @media screen and (max-width: 850px){

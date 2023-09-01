@@ -122,6 +122,12 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "stripeWebhookHandler": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "parameters": {
@@ -186,6 +192,30 @@
         {
           "category": "function",
           "resourceName": "machinelearningappPreSignup"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeWebhookHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeWebhookHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeWebhookHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeWebhookHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_stripeWebhookHandler_stripeSecretKey": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "stripeWebhookHandler"
         }
       ]
     }

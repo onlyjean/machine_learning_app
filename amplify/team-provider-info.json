@@ -20,7 +20,7 @@
       "function": {
         "StripePayment": {
           "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
-          "s3Key": "amplify-builds/StripePayment-3969757a526a76496c30-build.zip",
+          "s3Key": "amplify-builds/StripePayment-64345945677a4734474b-build.zip",
           "stripeSecretKey": "sk_test_51NUULNGGfDL03j8n21StZV7p1fUznAxM6VngXXxwEQKt17X3cYn8vx5uo84hYI0ujz2n8w8Q6PtdWmsiPCzx7cde00oLRbqbAk",
           "stripeWebhookSecret": "whsec_V0xZB2jQHSHXZGzfKEHWecnf3lOLvWvg"
         },
@@ -31,6 +31,11 @@
         "machinelearningappPreSignup": {
           "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
           "s3Key": "amplify-builds/machinelearningappPreSignup-4364582b333176524932-build.zip"
+        },
+        "stripeWebhookHandler": {
+          "deploymentBucketName": "amplify-machinelearningapp-dev-154057-deployment",
+          "s3Key": "amplify-builds/stripeWebhookHandler-78496a42506b2f2b6a73-build.zip",
+          "stripeSecretKey": "sk_test_51NUULNGGfDL03j8n21StZV7p1fUznAxM6VngXXxwEQKt17X3cYn8vx5uo84hYI0ujz2n8w8Q6PtdWmsiPCzx7cde00oLRbqbAk"
         }
       },
       "api": {

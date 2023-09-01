@@ -12,3 +12,5 @@ type StripeSubscription @model @auth(rules: [{allow: public}]) {
   userId: ID!
   user: Users @belongsTo(fields: ["userId"])
 }
+
+
