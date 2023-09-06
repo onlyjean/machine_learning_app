@@ -1,3 +1,5 @@
+
+/* Main Container for the section */
 .ml__algorithms {
 
     width: 100%;
@@ -7,6 +9,7 @@
 
 }
 
+/* Heading Container */
 .ml__algorithms-heading{
 
     flex: 1;
@@ -20,6 +23,7 @@
 
 }
 
+/* Heading Styling */
 .ml__algorithms-heading h1{
     font-family: var(--font-family);
     font-weight: 800;
@@ -29,6 +33,7 @@
 
 }
 
+/* Paragraph Styling */
 .ml__algorithms-heading p{
     font-family: var(--font-family);
     font-weight: 800;
@@ -39,6 +44,7 @@
 }
 
 
+/* Container for Algorithm Features */
 .ml__algorithms-container{
     flex: 1.5;
     display: flex;
@@ -47,6 +53,7 @@
     flex-direction: column;
 }
 
+/* Responsive Design for smaller screen*/
 @media screen and (max-width:990px) {
 
     .ml__algorithms {

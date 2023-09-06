@@ -1,122 +1,141 @@
+/* Main container for the CTA component */
 .ml__cta {
+    
     border: 1px solid white;
     color: white;
 
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
 
+    
     padding: 2rem;
     margin: 4rem;
+
+    
     border-radius: 1rem;
+
+    
     background: var(--gradient-brandcustom);
-
-
 }
 
+/* Styling for the paragraph inside the CTA content */
 .ml__cta-content p {
-
+    
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 14px;
     line-height: 30px;
-
 }
 
+/* Styling for the heading inside the CTA content */
 .ml__cta-content h3 {
-
+    
     font-family: var(--font-family);
     font-weight: 800;
     font-size: 24px;
     line-height: 45px;
-
 }
 
+/* Container for buttons */
 .ml__cta-button {
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
     margin-left: 2rem;
     margin: 1rem 0;
-
-    
-    
-
 }
 
+/* Styling for individual buttons */
 .ml__cta-button button {
-
-   
-   border-radius: 40px;
-   font-family: var(--font-family);
+    
+    border-radius: 40px;
+    font-family: var(--font-family);
     font-weight: bold;
     font-size: 18px;
     line-height: 30px;
-    padding: 0.5rem 1rem;
 
+    
+    padding: 0.5rem 1rem;
     border: none;
     outline: none;
+
+    
     cursor: pointer;
+
+    
     min-width: 150px;
-    
     margin: 1rem 0 1rem 2rem;
-    
 }
 
-
+/* Alert box styling */
 .alert {
+    
     position: fixed;
     z-index: 1000;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+
+    
     font-family: var(--font-family);
     font-size: 10px;
     color: #031B34;
-    transform: translate(-50%, -50%);
+
+    
     background-color: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    width: 300px; /* Adjust as needed */
-    height: 120px; /* Adjust as needed */
+    width: 300px;
+    height: 120px;
+
+    
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-  }
+}
 
-  .alert-close {
+/* Close button for the alert */
+.alert-close {
+    
     padding: 0.5rem 2rem;
-  color: #fff;
-  background: var(--gradient-brandcustom);
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 25px;
-  cursor: pointer;
-  }
+    color: #fff;
+    background: var(--gradient-brandcustom);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
 
+   
+    cursor: pointer;
+}
+
+/* Media query for responsive design */
 @media screen and (max-width:650px) {
+    
     .ml__cta {
         flex-direction: column;
-        
     }
 
     .ml__cta-button {
         flex-direction: column;
         margin: 2rem 0 0;
     }
-
 }
+
 
 @media screen and (max-width: 550px) {
 
     .ml__cta {
         margin: 4rem 2rem;
         flex-direction: column;
-    
     }
 
     .ml__cta-content h3 {
@@ -128,6 +147,4 @@
         font-size: 14px;
         line-height: 28px;
     }
-
 }
-

@@ -3,9 +3,13 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import './paymentsuccess.css';
 import { CheckCircle } from 'react-feather'; // You need to install react-feather for this
 
+
+// Main PaymentSuccess function
 const PaymentSuccess = () => {
   const navigate = useNavigate();
+  // Extracting session_id from the URL query parameters
   const location = useLocation();
+  // Extracting session_id from the URL query parameters
   const sessionId = new URLSearchParams(location.search).get('session_id');
 
   return (

@@ -2,6 +2,8 @@ import React from 'react'
 import Feature from '../feature/Feature'
 import './algo.css'
 
+
+// Data for the features to be displayed
 const featuresData = [
   {
       title:'Univariate Regression',
@@ -20,6 +22,8 @@ const featuresData = [
 
 ]
 
+
+//Algo function
 const Algo = () => {
 return (
   <div className='ml__algorithms section__padding' id='algo'>

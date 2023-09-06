@@ -4,9 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './signin.css';
 
-
-// ... other imports ...
-
+// SignIn function
 const SignIn = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
@@ -19,9 +17,7 @@ const SignIn = () => {
   }, [user, navigate]);
 
   return (
-    
     <>
-    {/* Apply the button-container CSS class to the button container */}
     <div className="button-container">
       <button className="signin-button" onClick={() => navigate("/")}>Home</button>
     </div>

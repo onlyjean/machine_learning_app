@@ -2,6 +2,7 @@ import React from 'react';
 import PlanCard from './PlanCard';
 import './pricing.css';
 
+//Main pricing function
 const Pricing = ({isAuthenticated}) => {
   return (
     <div className="pricing-container section__padding">

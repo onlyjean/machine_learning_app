@@ -3,23 +3,27 @@ import { API } from 'aws-amplify';
 import React, { useState } from 'react';
 import './plancard.css';
 
+// Main Plancard function
 export default function PlanCard({
   isAuthenticated,
   name,
   description,
   price,
-  features = [], // default value for features
+  features = [], 
   color,
   buttonText = 'Start Trial',
   
 }) {
-
+  // State variable to control the display of the alert message
   const [showAlert, setShowAlert] = useState(false);
+  // Initialising Stripe with the public key
   const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
   console.log(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
 
+  // Function to handle button click
   const handleButtonClick = async () => {
     if (isAuthenticated) {
+      // Create a Stripe checkout session
       const session = await API.post('StripeAPI','/create-checkout-session', {
         method: 'POST',
       });
@@ -39,7 +43,7 @@ export default function PlanCard({
   
 
 
-  
+  // JSX for PlanCard Component
   return (
     <div className="plan-card" style={{ backgroundColor: color }}>
       {showAlert && <div className='alert'>Please register first<button className='alert-close' onClick={() => setShowAlert(false)}>Close</button>

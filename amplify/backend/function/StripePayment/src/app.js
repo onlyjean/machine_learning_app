@@ -75,18 +75,11 @@ app.post('/create-checkout-session', bodyParser.json(), async (req, res) => {
             quantity: 1,
         }],
         mode: 'subscription',
-        success_url: 'http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}',
-        cancel_url: 'http://localhost:3000/signedin',
-        // client_reference_id: username,
-        // metadata: {
-        //     username: username,
-        // },
+        success_url: 'https://main.dsxr40yvbyhag.amplifyapp.com/success?session_id={CHECKOUT_SESSION_ID}',
+        cancel_url: 'https://main.dsxr40yvbyhag.amplifyapp.com/signedin',
     });
 
-    // console.log("Creating Stripe session with username:", username);
-
     console.log("Stripe session created:", session);
-
     const subscriptionData = {
         stripeSubscriptionId: session.id,
         plan: 'LSTM Model',

@@ -2,6 +2,7 @@ import React from 'react';
 import './brand.css'
 import {google, streamlit, aws, reactlogo, docker, python, mlflow} from './imgImports'
 
+//Brand Logos function
 const Brand = () => {
   return (
     <div className='ml__brand section__padding'>

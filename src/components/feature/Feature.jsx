@@ -1,6 +1,7 @@
 import React from 'react'
 import './feature.css'
 
+// Feasture function
 const Feature = ({title, text}) => {
   return (
     <div className='ml__features-container__feature'>
