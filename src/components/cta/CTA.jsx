@@ -45,7 +45,7 @@ const CTA = ({ isSubscribed, username }) => {  // isSubscribed and username are 
     
     if (isSubscribed) {
       // If the user is subscribed, redirect them to the Streamlit app
-      window.open("https://lstm-streamlit.onrender.com", '_blank');
+      window.open("https://streamlit-lstm-app-kkl5inde2q-uc.a.run.app", '_blank');
         } else {
       // If the user is not subscribed, alert them to subscribe
       setShowAlert(true); 
