@@ -1,3 +1,6 @@
+
+1.	Machine_learning_app.zip (contains the landing page web application). Type ‘npm start’ in any IDEs terminal to run this locally. This can also be found on the Internet at https://main.dsxr40yvbyhag.amplifyapp.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
