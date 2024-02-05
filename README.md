@@ -5,9 +5,9 @@ This project is a full-stack web application that demonstrates the integration o
 
 ## Features
 - Interactive web interface built with React
-- Backend API developed with Flask to serve machine learning predictions
+- Backend API developed with AWS to serve machine learning predictions
 - Integration of a machine learning model to predict real-time outcomes based on user input
-- Containerized application deployment using Docker
+- Containerised application deployment using Docker
 
 ## Live Demo
 You can access a live demo of the application here: [https://main.dsxr40yvbyhag.amplifyapp.com/](https://main.dsxr40yvbyhag.amplifyapp.com/)
