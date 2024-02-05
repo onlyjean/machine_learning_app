@@ -14,9 +14,9 @@ You can access a live demo of the application here: [https://main.dsxr40yvbyhag.
 
 ## Technologies
 - **Frontend:** React for building the user interface
-- **Backend:** AWS, Node.js for handling API requests and serving machine learning model predictions
+- **Backend:** Flask for handling API requests and serving machine learning model predictions
 - **Machine Learning:** Python with libraries such as Pandas, NumPy, and Scikit-Learn for model development
-- **Deployment:** Docker for containerisation and AWS Amplify for hosting
+- **Deployment:** Docker for containerization and AWS Amplify for hosting
 
 ## Setup and Installation
 Ensure you have Docker installed on your machine. Follow these steps to run the application locally:
