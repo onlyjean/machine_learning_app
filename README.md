@@ -5,7 +5,7 @@ This project is a full-stack web application that demonstrates the integration o
 
 ## Architecture 
 
-<img src="/src/assets/Architecture Design .drawio(1).png" alt="Logo" width="100" height="100">
+<img src="/src/assets/Architecture Design .drawio(1).png" alt="Logo" width="800" height="250">
 
 ## Features
 - Interactive web interface built with React
@@ -18,7 +18,7 @@ You can access a live demo of the application here: [https://main.dsxr40yvbyhag.
 
 
 ## Front End 
-<img src="/src/assets/Screenshot 2023-08-30 at 15.27.06.png" alt="Logo" width="150" height="100">
+<img src="/src/assets/Screenshot 2023-08-30 at 15.27.06.png" alt="Logo" width="400" height="300">
 
 
 ## Technologies
